@@ -58,12 +58,12 @@ body {
 
 
 /* Рекомендации */
-.rec{
+.recommendations{
     background-color: #fafafa;
     width: 100%; 
     padding: 100px 0 100px 0;
 }
-#reci_block{
+#recommendations_block{
     background-image: url(bookshelf.jpeg);
     background-size: contain;
     text-align: center;
