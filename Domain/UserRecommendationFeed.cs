@@ -28,4 +28,9 @@ public class UserRecommendationFeed
         if (obj.GetType() != this.GetType()) return false;
         return Equals((UserRecommendationFeed)obj);
     }
+    
+    public override int GetHashCode()
+    {
+        return User.GetHashCode();
+    }
 }

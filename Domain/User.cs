@@ -39,4 +39,9 @@ public class User
         if (obj.GetType() != this.GetType()) return false;
         return Equals((User)obj);
     }
+    
+    public override int GetHashCode()
+    {
+        return EqualityComparer<string>.Default.GetHashCode(Id);
+    }
 }
