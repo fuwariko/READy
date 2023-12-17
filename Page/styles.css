@@ -100,20 +100,24 @@ body {
 }
 #recommendations_block{
     background-image: url(bookshelf.jpeg);
-    background-size: contain;
+    background-size: cover;
+    border-radius: 15px;
     text-align: center;
     align-self: center;
-    width: 80%;
+    width: 100%;
     height: 70px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
+    font-size: 50px;
+    color: black;
+    letter-spacing: 3px;
+    cursor: pointer;
 }
-
 
 
 /* Модальное окно */
 #zatemnenie {
+    overflow: hidden;
     background: rgba(102, 102, 102, 0.5);
     width: 100%;
     height: 100%;
@@ -121,16 +125,17 @@ body {
     top: 0;
     left: 0;
     display: none;
-    overflow: hidden
   }
   #okno {
-    width: 600px;
-    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 32%;
+    height: 100hv;
     text-align: center;
     padding: 15px;
-    border: 3px solid #0000cc;
-    border-radius: 10px;
-    color: #0000cc;
     position: absolute;
     top: 0;
     right: 0;
@@ -139,19 +144,62 @@ body {
     margin: auto;
     background: #fff;
   }
-  #zatemnenie:target {display: block;}
-  .close {
+  .img{
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+  }
+  .decorations{
+    z-index: 9;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #like{
     display: inline-block;
-    border: 1px solid #0000cc;
-    color: #0000cc;
+    color: black;
     padding: 0 12px;
     margin: 10px;
     text-decoration: none;
     background: #f2f2f2;
     font-size: 14pt;
+    border-radius: 15px;
     cursor:pointer;
   }
+  #text{
+    padding: 0 12px;
+    margin: 10px;
+  }
+  #link{
+    display: inline-block;
+    color: black;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    border-radius: 15px;
+    cursor:pointer;
+  }
+  #zatemnenie:target {display: block;}
+  .close {
+    display: inline-block;
+    color: black;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    border-radius: 15px;
+  
+  }
   .close:hover {background: #e6e6ff;}
+
 
 
 

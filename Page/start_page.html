@@ -34,16 +34,14 @@
 
     <div class="recommendations">
       <a href="#zatemnenie">
-        <div id="recommendations_block">
-        </div>
+        <input  id="recommendations_block" type="button" value="Рекомендации">
       </a>
     </div>
     
 
     <div id="zatemnenie">
+      <a href="#" class="close" type = "button">Закрыть</a>
       <div id="okno">
-        <embed src="dkr.pdf" width=580 height=640/>
-        <a href="#" class="close">Закрыть</a>
       </div>
     </div>
      
@@ -76,5 +74,131 @@
     <div id="footer">
       <p>Здесь будет какая-нибудь инфа о правах</p>
     </div>
+
+
+    <script>
+      const feedContainer = document.getElementById("okno");
+        const images = [
+          { title: "Изображение 1", source: "обложка1.png"},
+          { title: "Изображение 2", source: "book1.png" },
+          { title: "Изображение 3", source: "book2.png" },
+          { title: "Изображение 3", source: "book1.png" }
+        ];
+        const right_images = [
+          { title: "Изображение 1.1", source: "книга.pdf" },
+          { title: "Изображение 2.1", source: "dkr.pdf" },
+          { title: "Изображение 3.1", source: "dkr.pdf" },
+          { title: "Изображение 3.1", source: "dkr.pdf" }
+        ];
+
+
+        let currentIndex = 0;
+        
+        function updateFeed() {
+          feedContainer.innerHTML = `
+            <div class ="img">
+              <img src="${images[currentIndex].source}">
+            </div>
+            <div class = "decorations">
+              <input id="like" type ="button" value ="like">
+              <input id="link" type ="button" value ="автор">
+              <p id="text">#книга</p>
+            </div>
+          `;
+        }
+        function rightUpdateFeed(){
+          feedContainer.innerHTML = `
+            <embed src="${right_images[currentIndex].source}"  width=1000 height=1000/>
+          `;
+        }
+        
+        function changeImage(direction)
+         {
+          if (direction === "up") 
+          {
+            if (currentIndex === 0) 
+              return; 
+            currentIndex = currentIndex - 1;
+          } 
+          else if (direction === "down") 
+          {
+            const nextIndex = currentIndex + 1;
+            if (nextIndex === 0) 
+              return;
+            currentIndex = nextIndex;
+          }
+          
+          updateFeed();
+        }
+
+
+        let isRightPressed = false;
+        let isLeftPressed = false;
+
+        function changeImageRight()
+        {
+          if (!isRightPressed) 
+          {
+            isRightPressed = true;
+            rightUpdateFeed();
+          }
+        }
+
+        function changeImageLeft()
+        {
+          if (!isLeftPressed) 
+          {
+            isLeftPressed = true;
+            updateFeed();
+          }
+        }
+
+        function resetFlags() {
+          isRightPressed = false;
+          isLeftPressed = false;
+        }
+
+        
+
+        document.addEventListener("keydown", function(event) 
+        {
+          if (event.key === "ArrowUp") 
+          {
+            event.preventDefault();
+            changeImage("up");
+          }
+          else if (event.key === "ArrowDown") 
+          {
+            event.preventDefault();
+            changeImage("down");
+          }
+          else if (event.key === "ArrowLeft") 
+          {
+            event.preventDefault();
+            if (!isLeftPressed) 
+            {
+              changeImageLeft("left");
+            }
+          }
+          else if (event.key === "ArrowRight") 
+          {
+            event.preventDefault();
+            if (!isRightPressed) 
+            {
+              changeImageRight("right");
+            }
+          }
+        });
+
+       document.addEventListener("keyup", function(event) {
+          if (event.key === "ArrowLeft") {
+            resetFlags();
+          } else if (event.key === "ArrowRight") {
+            resetFlags();
+          }
+        });
+        
+        updateFeed();
+    </script>
   </body>
 </html>
