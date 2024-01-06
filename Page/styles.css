@@ -169,11 +169,12 @@ body {
     background: #f2f2f2;
     font-size: 14pt;
     border-radius: 15px;
-    cursor:pointer;
+    cursor: pointer;
   }
   #text{
     padding: 0 12px;
     margin: 10px;
+    color: white;
   }
   #link{
     display: inline-block;
@@ -199,6 +200,20 @@ body {
   
   }
   .close:hover {background: #e6e6ff;}
+  decorations-overlay {
+    position: relative;
+  }
+  #like:hover {background: #e6e6ff;}
+  decorations-overlay {
+    position: relative;
+  }
+  #link:hover {background: #e6e6ff;}
+  decorations-overlay {
+    position: relative;
+  }
+
+
+  
 
 
 

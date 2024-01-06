@@ -79,16 +79,76 @@
     <script>
       const feedContainer = document.getElementById("okno");
         const images = [
-          { title: "Изображение 1", source: "обложка1.png"},
-          { title: "Изображение 2", source: "book1.png" },
-          { title: "Изображение 3", source: "book2.png" },
-          { title: "Изображение 3", source: "book1.png" }
+          { source: "covers/1.jpg"},
+          { source: "covers/2.jpg" },
+          { source: "covers/3.jpg" },
+          { source: "covers/4.jpg"},
+          { source: "covers/5.jpg"},
+          { source: "covers/6.jpg" },
+          { source: "covers/7.jpg" },
+          { source: "covers/8.jpg"},
+          { source: "covers/10.jpg"},
+          { source: "covers/11.jpg" },
+          { source: "covers/12.jpg" },
+          { source: "covers/13.jpg"},
+          { source: "covers/14.jpg"},
+          { source: "covers/15.jpg" },
+          { source: "covers/16.jpg" },
+          { source: "covers/17.jpg"},
+          { source: "covers/18.jpg"},
+          { source: "covers/19.jpg" },
+          { source: "covers/20.jpg" },
+          { source: "covers/21.jpg"},
+          { source: "covers/22.jpg"},
+          { source: "covers/23.jpg" },
+          { source: "covers/24.jpg" },
+          { source: "covers/25.jpg"},
+          { source: "covers/26.jpg"},
+          { source: "covers/27.jpg" },
+          { source: "covers/28.jpg" },
+          { source: "covers/29.jpg"},
+          { source: "covers/30.jpg"},
+          { source: "covers/31.jpg"},
+          { source: "covers/32.jpg" },
+          { source: "covers/33.jpg" },
+          { source: "covers/34.jpg"},
         ];
         const right_images = [
-          { title: "Изображение 1.1", source: "книга.pdf" },
-          { title: "Изображение 2.1", source: "dkr.pdf" },
-          { title: "Изображение 3.1", source: "dkr.pdf" },
-          { title: "Изображение 3.1", source: "dkr.pdf" }
+          { source: "books/1.pdf" },
+          { source: "books/2.pdf" },
+          { source: "books/3.pdf" },
+          { source: "books/4.pdf" },
+          { source: "books/5.pdf" },
+          { source: "books/6.pdf" },
+          { source: "books/7.pdf" },
+          { source: "books/8.pdf" },
+          { source: "books/9.pdf" },
+          { source: "books/10.pdf" },
+          { source: "books/11.pdf" },
+          { source: "books/12.pdf" },
+          { source: "books/13.pdf" },
+          { source: "books/14.pdf" },
+          { source: "books/15.pdf" },
+          { source: "books/16.pdf" },
+          { source: "books/17.pdf" },
+          { source: "books/18.pdf" },
+          { source: "books/19.pdf" },
+          { source: "books/20.pdf" },
+          { source: "books/21.pdf" },
+          { source: "books/22.pdf" },
+          { source: "books/23.pdf" },
+          { source: "books/24.pdf" },
+          { source: "books/25.pdf" },
+          { source: "books/26.pdf" },
+          { source: "books/27.pdf" },
+          { source: "books/28.pdf" },
+          { source: "books/29.pdf" },
+          { source: "books/30.pdf" },
+          { source: "books/31.pdf" },
+          { source: "books/32.pdf" },
+          { source: "books/33.pdf" },
+          { source: "books/34.pdf" },
+          { source: "books/35.pdf" },
         ];
 
 
@@ -100,12 +160,14 @@
               <img src="${images[currentIndex].source}">
             </div>
             <div class = "decorations">
-              <input id="like" type ="button" value ="like">
-              <input id="link" type ="button" value ="автор">
-              <p id="text">#книга</p>
+              <input id="like" type ="button" value ="Лайк">
+              <a id="link" type ="button"  href="lk.html"> К автору </a> 
+              <p id="text">#книга #жанр</p>
             </div>
           `;
+          
         }
+        
         function rightUpdateFeed(){
           feedContainer.innerHTML = `
             <embed src="${right_images[currentIndex].source}"  width=1000 height=1000/>
