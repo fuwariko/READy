@@ -87,6 +87,7 @@
           { source: "covers/6.jpg" },
           { source: "covers/7.jpg" },
           { source: "covers/8.jpg"},
+          { source: "covers/9.jpg"},
           { source: "covers/10.jpg"},
           { source: "covers/11.jpg" },
           { source: "covers/12.jpg" },
@@ -112,6 +113,7 @@
           { source: "covers/32.jpg" },
           { source: "covers/33.jpg" },
           { source: "covers/34.jpg"},
+          { source: "covers/35.jpg"},
         ];
         const right_images = [
           { source: "books/1.pdf#toolbar=0" },
@@ -170,7 +172,7 @@
         
         function rightUpdateFeed(){
           feedContainer.innerHTML = `
-            <embed src="${right_images[currentIndex].source}"  width=1000 height=1000 type='application/pdf'>
+            <embed src="${right_images[currentIndex].source}"  width=1000 height=1000/>
           `;
         }
         
