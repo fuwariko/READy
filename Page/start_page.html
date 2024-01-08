@@ -1,163 +1,164 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link href="styles.css" rel="stylesheet" />
-    <title>READY</title>
-  </head>
-  <body>
-    <div id="header">
-      <div id = "nav">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="styles.css" rel="stylesheet" />
+  <title>READY</title>
+</head>
+
+<body>
+  <div id="header">
+    <div id="nav">
+      <div>
+        <ul>
+          <li><input class="text-field__input" type="text" name="find" placeholder="Поиск"></li>
+        </ul>
+      </div>
+      <div id="link_and_lk">
         <div>
           <ul>
-            <li><input class="text-field__input" type="text" name="find" placeholder="Поиск"></li>
+            <li><a href="start_page.html">Главная</a></li>
+            <li><a href="add.html">Добавить работу</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О сайте</a></li>
           </ul>
         </div>
-        <div id="link_and_lk">
-          <div>
-            <ul>
-              <li><a href="start_page.html">Главная</a></li>
-              <li><a href="#">ААА</a></li>
-              <li><a href="#">БББ</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">О сайте</a></li>
-            </ul>
+        <a href="lk.html">
+          <div id="circle">
           </div>
-          <a href="lk.html">
-            <div id="circle">
-            </div>
-          </a>
-        </div>
+        </a>
       </div>
     </div>
+  </div>
 
 
-    <div class="recommendations">
-      <a href="#zatemnenie">
-        <input  id="recommendations_block" type="button" value="Рекомендации">
-      </a>
+  <div class="recommendations">
+    <a href="#zatemnenie">
+      <input id="recommendations_block" type="button" value="Рекомендации">
+    </a>
+  </div>
+
+
+  <div id="zatemnenie">
+    <a href="#" class="close" type="button">Закрыть</a>
+    <div id="okno">
     </div>
-    
+  </div>
 
-    <div id="zatemnenie">
-      <a href="#" class="close" type = "button">Закрыть</a>
-      <div id="okno">
-      </div>
+
+  <div class="filter">
+    <div class="block_filter">
+      Фильтры:
     </div>
-     
-
-    <div class="filter">
-      <div class="block_filter">
-        Фильтры:
-      </div>
-      <div class="block_filter">
-        Детектив
-      </div>
+    <div class="block_filter">
+      Детектив
     </div>
+  </div>
 
 
-    <div class="books">
+  <div class="books">
 
-      <div class="book" id="book1">
-      </div>
-
-      <div class="book" id="book2">
-      </div>
-
-      <div class="book" id="book3">
-      </div>
-
-      <div class="book" id="book4">
-      </div>
+    <div class="book" id="book1">
     </div>
 
-    <div id="footer">
-      <p>Здесь будет какая-нибудь инфа о правах</p>
+    <div class="book" id="book2">
     </div>
 
+    <div class="book" id="book3">
+    </div>
 
-    <script>
-      const feedContainer = document.getElementById("okno");
-        const images = [
-          { source: "covers/1.jpg"},
-          { source: "covers/2.jpg" },
-          { source: "covers/3.jpg" },
-          { source: "covers/4.jpg"},
-          { source: "covers/5.jpg"},
-          { source: "covers/6.jpg" },
-          { source: "covers/7.jpg" },
-          { source: "covers/8.jpg"},
-          { source: "covers/9.jpg"},
-          { source: "covers/10.jpg"},
-          { source: "covers/11.jpg" },
-          { source: "covers/12.jpg" },
-          { source: "covers/13.jpg"},
-          { source: "covers/14.jpg"},
-          { source: "covers/15.jpg" },
-          { source: "covers/16.jpg" },
-          { source: "covers/17.jpg"},
-          { source: "covers/18.jpg"},
-          { source: "covers/19.jpg" },
-          { source: "covers/20.jpg" },
-          { source: "covers/21.jpg"},
-          { source: "covers/22.jpg"},
-          { source: "covers/23.jpg" },
-          { source: "covers/24.jpg" },
-          { source: "covers/25.jpg"},
-          { source: "covers/26.jpg"},
-          { source: "covers/27.jpg" },
-          { source: "covers/28.jpg" },
-          { source: "covers/29.jpg"},
-          { source: "covers/30.jpg"},
-          { source: "covers/31.jpg"},
-          { source: "covers/32.jpg" },
-          { source: "covers/33.jpg" },
-          { source: "covers/34.jpg"},
-          { source: "covers/35.jpg"},
-        ];
-        const right_images = [
-          { source: "books/1.pdf#toolbar=0" },
-          { source: "books/2.pdf#toolbar=0" },
-          { source: "books/3.pdf#toolbar=0" },
-          { source: "books/4.pdf#toolbar=0" },
-          { source: "books/5.pdf#toolbar=0" },
-          { source: "books/6.pdf#toolbar=0" },
-          { source: "books/7.pdf#toolbar=0" },
-          { source: "books/8.pdf#toolbar=0" },
-          { source: "books/9.pdf#toolbar=0" },
-          { source: "books/10.pdf#toolbar=0" },
-          { source: "books/11.pdf#toolbar=0" },
-          { source: "books/12.pdf#toolbar=0" },
-          { source: "books/13.pdf#toolbar=0" },
-          { source: "books/14.pdf#toolbar=0" },
-          { source: "books/15.pdf#toolbar=0" },
-          { source: "books/16.pdf#toolbar=0" },
-          { source: "books/17.pdf#toolbar=0" },
-          { source: "books/18.pdf#toolbar=0" },
-          { source: "books/19.pdf#toolbar=0" },
-          { source: "books/20.pdf#toolbar=0" },
-          { source: "books/21.pdf#toolbar=0" },
-          { source: "books/22.pdf#toolbar=0" },
-          { source: "books/23.pdf#toolbar=0" },
-          { source: "books/24.pdf#toolbar=0" },
-          { source: "books/25.pdf#toolbar=0" },
-          { source: "books/26.pdf#toolbar=0" },
-          { source: "books/27.pdf#toolbar=0" },
-          { source: "books/28.pdf#toolbar=0" },
-          { source: "books/29.pdf#toolbar=0" },
-          { source: "books/30.pdf#toolbar=0" },
-          { source: "books/31.pdf#toolbar=0" },
-          { source: "books/32.pdf#toolbar=0" },
-          { source: "books/33.pdf#toolbar=0" },
-          { source: "books/34.pdf#toolbar=0" },
-          { source: "books/35.pdf#toolbar=0" },
-        ];
+    <div class="book" id="book4">
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Здесь будет какая-нибудь инфа о правах</p>
+  </div>
 
 
-        let currentIndex = 0;
-        
-        function updateFeed() {
-          feedContainer.innerHTML = `
+  <script>
+    const feedContainer = document.getElementById("okno");
+    const images = [
+      { source: "covers/1.jpg" },
+      { source: "covers/2.jpg" },
+      { source: "covers/3.jpg" },
+      { source: "covers/4.jpg" },
+      { source: "covers/5.jpg" },
+      { source: "covers/6.jpg" },
+      { source: "covers/7.jpg" },
+      { source: "covers/8.jpg" },
+      { source: "covers/9.jpg" },
+      { source: "covers/10.jpg" },
+      { source: "covers/11.jpg" },
+      { source: "covers/12.jpg" },
+      { source: "covers/13.jpg" },
+      { source: "covers/14.jpg" },
+      { source: "covers/15.jpg" },
+      { source: "covers/16.jpg" },
+      { source: "covers/17.jpg" },
+      { source: "covers/18.jpg" },
+      { source: "covers/19.jpg" },
+      { source: "covers/20.jpg" },
+      { source: "covers/21.jpg" },
+      { source: "covers/22.jpg" },
+      { source: "covers/23.jpg" },
+      { source: "covers/24.jpg" },
+      { source: "covers/25.jpg" },
+      { source: "covers/26.jpg" },
+      { source: "covers/27.jpg" },
+      { source: "covers/28.jpg" },
+      { source: "covers/29.jpg" },
+      { source: "covers/30.jpg" },
+      { source: "covers/31.jpg" },
+      { source: "covers/32.jpg" },
+      { source: "covers/33.jpg" },
+      { source: "covers/34.jpg" },
+      { source: "covers/35.jpg" },
+    ];
+    const right_images = [
+      { source: "books/1.pdf#toolbar=0" },
+      { source: "books/2.pdf#toolbar=0" },
+      { source: "books/3.pdf#toolbar=0" },
+      { source: "books/4.pdf#toolbar=0" },
+      { source: "books/5.pdf#toolbar=0" },
+      { source: "books/6.pdf#toolbar=0" },
+      { source: "books/7.pdf#toolbar=0" },
+      { source: "books/8.pdf#toolbar=0" },
+      { source: "books/9.pdf#toolbar=0" },
+      { source: "books/10.pdf#toolbar=0" },
+      { source: "books/11.pdf#toolbar=0" },
+      { source: "books/12.pdf#toolbar=0" },
+      { source: "books/13.pdf#toolbar=0" },
+      { source: "books/14.pdf#toolbar=0" },
+      { source: "books/15.pdf#toolbar=0" },
+      { source: "books/16.pdf#toolbar=0" },
+      { source: "books/17.pdf#toolbar=0" },
+      { source: "books/18.pdf#toolbar=0" },
+      { source: "books/19.pdf#toolbar=0" },
+      { source: "books/20.pdf#toolbar=0" },
+      { source: "books/21.pdf#toolbar=0" },
+      { source: "books/22.pdf#toolbar=0" },
+      { source: "books/23.pdf#toolbar=0" },
+      { source: "books/24.pdf#toolbar=0" },
+      { source: "books/25.pdf#toolbar=0" },
+      { source: "books/26.pdf#toolbar=0" },
+      { source: "books/27.pdf#toolbar=0" },
+      { source: "books/28.pdf#toolbar=0" },
+      { source: "books/29.pdf#toolbar=0" },
+      { source: "books/30.pdf#toolbar=0" },
+      { source: "books/31.pdf#toolbar=0" },
+      { source: "books/32.pdf#toolbar=0" },
+      { source: "books/33.pdf#toolbar=0" },
+      { source: "books/34.pdf#toolbar=0" },
+      { source: "books/35.pdf#toolbar=0" },
+    ];
+
+
+    let currentIndex = 0;
+
+    function updateFeed() {
+      feedContainer.innerHTML = `
             <div class ="img">
               <img src="${images[currentIndex].source}">
             </div>
@@ -166,102 +167,89 @@
               <a id="link" type ="button"  href="lk.html"> К автору </a> 
             </div>
           `;
-          
-        }
-        
-        function rightUpdateFeed(){
-          feedContainer.innerHTML = `
+
+    }
+
+    function rightUpdateFeed() {
+      feedContainer.innerHTML = `
             <embed src="${right_images[currentIndex].source}"  width=1000 height=1000/>
           `;
-        }
-        
-        function changeImage(direction)
-         {
-          if (direction === "up") 
-          {
-            if (currentIndex === 0) 
-              return; 
-            currentIndex = currentIndex - 1;
-          } 
-          else if (direction === "down") 
-          {
-            const nextIndex = currentIndex + 1;
-            if (nextIndex === 0) 
-              return;
-            currentIndex = nextIndex;
-          }
-          
-          updateFeed();
-        }
+    }
+
+    function changeImage(direction) {
+      if (direction === "up") {
+        if (currentIndex === 0)
+          return;
+        currentIndex = currentIndex - 1;
+      }
+      else if (direction === "down") {
+        const nextIndex = currentIndex + 1;
+        if (nextIndex === 0)
+          return;
+        currentIndex = nextIndex;
+      }
+
+      updateFeed();
+    }
 
 
-        let isRightPressed = false;
-        let isLeftPressed = false;
+    let isRightPressed = false;
+    let isLeftPressed = false;
 
-        function changeImageRight()
-        {
-          if (!isRightPressed) 
-          {
-            isRightPressed = true;
-            rightUpdateFeed();
-          }
-        }
+    function changeImageRight() {
+      if (!isRightPressed) {
+        isRightPressed = true;
+        rightUpdateFeed();
+      }
+    }
 
-        function changeImageLeft()
-        {
-          if (!isLeftPressed) 
-          {
-            isLeftPressed = true;
-            updateFeed();
-          }
-        }
-
-        function resetFlags() {
-          isRightPressed = false;
-          isLeftPressed = false;
-        }
-
-        
-
-        document.addEventListener("keydown", function(event) 
-        {
-          if (event.key === "ArrowUp") 
-          {
-            event.preventDefault();
-            changeImage("up");
-          }
-          else if (event.key === "ArrowDown") 
-          {
-            event.preventDefault();
-            changeImage("down");
-          }
-          else if (event.key === "ArrowLeft") 
-          {
-            event.preventDefault();
-            if (!isLeftPressed) 
-            {
-              changeImageLeft("left");
-            }
-          }
-          else if (event.key === "ArrowRight") 
-          {
-            event.preventDefault();
-            if (!isRightPressed) 
-            {
-              changeImageRight("right");
-            }
-          }
-        });
-
-       document.addEventListener("keyup", function(event) {
-          if (event.key === "ArrowLeft") {
-            resetFlags();
-          } else if (event.key === "ArrowRight") {
-            resetFlags();
-          }
-        });
-        
+    function changeImageLeft() {
+      if (!isLeftPressed) {
+        isLeftPressed = true;
         updateFeed();
-    </script>
-  </body>
+      }
+    }
+
+    function resetFlags() {
+      isRightPressed = false;
+      isLeftPressed = false;
+    }
+
+
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowUp") {
+        event.preventDefault();
+        changeImage("up");
+      }
+      else if (event.key === "ArrowDown") {
+        event.preventDefault();
+        changeImage("down");
+      }
+      else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        if (!isLeftPressed) {
+          changeImageLeft("left");
+        }
+      }
+      else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        if (!isRightPressed) {
+          changeImageRight("right");
+        }
+      }
+    });
+
+    document.addEventListener("keyup", function (event) {
+      if (event.key === "ArrowLeft") {
+        resetFlags();
+      } else if (event.key === "ArrowRight") {
+        resetFlags();
+      }
+    });
+
+    updateFeed();
+  </script>
+</body>
+
 </html>

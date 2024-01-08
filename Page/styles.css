@@ -1,21 +1,38 @@
 * {
     box-sizing: border-box;
 }
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
-                 
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
 }
+
 body {
-    font-family: Verdana, Arial, sans-serif;    
+    font-family: Verdana, Arial, sans-serif;
     background-color: #f7f7f7;
 }
-#header{ 
+
+#header {
     background-color: #f4f4f4;
 }
+
 #header h1 {
     font-size: 24px;
     text-transform: uppercase;
@@ -37,11 +54,13 @@ body {
     width: 100%;
     align-items: center;
 }
+
 #nav li {
     float: left;
     list-style: none;
     align-items: center;
 }
+
 #nav a {
     display: block;
     color: black;
@@ -49,15 +68,19 @@ body {
     text-decoration: none;
     border-right: 1px solid #ccc;
 }
+
 #nav li:last-child a {
-    border-right: none; 
+    border-right: none;
 }
+
 #nav a:hover {
     font-weight: bold;
 }
-#nav_poisk{
+
+#nav_poisk {
     border-right: 1px solid #ccc;
 }
+
 #circle {
     background-image: url(avatar.jpg);
     background-size: contain;
@@ -65,7 +88,8 @@ body {
     height: 5em;
     width: 5em;
 }
-#link_and_lk{
+
+#link_and_lk {
     display: inline-flex;
     float: right;
     align-items: center;
@@ -88,17 +112,18 @@ body {
     border: 1px solid #bdbdbd;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
+}
 
 
 
 /* Рекомендации */
-.recommendations{
+.recommendations {
     background-color: #fafafa;
-    width: 100%; 
+    width: 100%;
     padding: 100px 0 100px 0;
 }
-#recommendations_block{
+
+#recommendations_block {
     background-image: url(bookshelf.jpeg);
     background-size: cover;
     border-radius: 15px;
@@ -126,8 +151,9 @@ body {
     top: 0;
     left: 0;
     display: none;
-  }
-  #okno {
+}
+
+#okno {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -143,12 +169,14 @@ body {
     left: 0;
     margin: auto;
     background: #fff;
-  }
-  .img{
+}
+
+.img {
     width: 100vh;
-    height: 100vh;            
-  }
-  .decorations{
+    height: 100vh;
+}
+
+.decorations {
     z-index: 9;
     position: absolute;
     bottom: 10px;
@@ -158,8 +186,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  #like{
+}
+
+#like {
     display: inline-block;
     color: black;
     padding: 0 12px;
@@ -169,8 +198,9 @@ body {
     font-size: 14pt;
     border-radius: 15px;
     cursor: pointer;
-  }
-  #link{
+}
+
+#link {
     display: inline-block;
     color: black;
     padding: 0 12px;
@@ -179,11 +209,15 @@ body {
     background: #f2f2f2;
     font-size: 14pt;
     border-radius: 15px;
-    cursor:pointer;
+    cursor: pointer;
     border: 1px solid black;
-  }
-  #zatemnenie:target {display: block;}
-  .close {
+}
+
+#zatemnenie:target {
+    display: block;
+}
+
+.close {
     display: inline-block;
     color: black;
     padding: 0 12px;
@@ -192,66 +226,86 @@ body {
     background: #f2f2f2;
     font-size: 14pt;
     border-radius: 15px;
-  
-  }
-  .close:hover {background: #e6e6ff;}
-  decorations-overlay {
+
+}
+
+.close:hover {
+    background: #e6e6ff;
+}
+
+decorations-overlay {
     position: relative;
-  }
-  #like:hover {background: #e6e6ff;}
-  decorations-overlay {
+}
+
+#like:hover {
+    background: #e6e6ff;
+}
+
+decorations-overlay {
     position: relative;
-  }
-  #link:hover {background: #e6e6ff;}
-  decorations-overlay {
+}
+
+#link:hover {
+    background: #e6e6ff;
+}
+
+decorations-overlay {
     position: relative;
-  }
+}
 
 
-  
+
 
 
 
 
 /* Центральная часть */
-.wrapper{
+.wrapper {
     background-color: #f7f7f7;
 }
+
 .aside h2 {
     font-size: 0.95em;
     margin-top: 15px;
 }
+
 .aside h3 {
     font-size: 0.85em;
     margin-top: 10px;
 }
-.aside p, .aside li {
+
+.aside p,
+.aside li {
     font-size: .75em;
-    margin-top: 10px;   
+    margin-top: 10px;
 }
-.aside li{ 
+
+.aside li {
     list-style-type: none;
 }
+
 #sidebar1 {
     float: left;
-    width: 20%; 
+    width: 20%;
     padding: 0 100px 0 20px;
 }
+
 #sidebar2 {
     float: right;
-    width: 20%; 
+    width: 20%;
     padding: 0 100px 0 10px;
 }
 
 
 
-.filter{
+.filter {
     width: 100%;
     height: 50px;
     display: inline-flex;
     padding: 0px 0 50px 20px;
 }
-.block_filter{
+
+.block_filter {
     background-color: #85ffcc;
     background-size: contain;
     text-align: center;
@@ -264,34 +318,39 @@ body {
 
 
 /* Список книг */
-.books{
+.books {
     width: 100%;
     padding: 0 30px 0 30px;
     display: flex;
     justify-content: space-between;
 }
+
 .book {
     background-color: #8b8b8b;
     width: 280px;
     height: 350px;
     border-radius: 10px;
 }
-#book1{
-    background-image: url("book1.png");
+
+#book1 {
+    background-image: url("covers/8.jpg");
 }
-#book2{
-    background-image: url("book2.png");
+
+#book2 {
+    background-image: url("covers/16.jpg");
 }
-#book3{
-    background-image: url("book3.png");
+
+#book3 {
+    background-image: url("covers/21.jpg");
 }
-#book4{
-    background-image: url("book4.png");
+
+#book4 {
+    background-image: url("covers/17.jpg");
 }
 
 
 /* Текст блоков с книгами */
-#article{
+#article {
     background-color: #fafafa;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -300,22 +359,26 @@ body {
     padding: 15px;
     width: 60%;
 }
-#article:after{
-    clear:both;
-    display:table;
-    content:'';
+
+#article:after {
+    clear: both;
+    display: table;
+    content: '';
 }
-#article h2{
+
+#article h2 {
     font-size: 1.3em;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
-#article p{
+
+#article p {
     line-height: 150%;
     margin-bottom: 15px;
 }
-#footer{ 
+
+#footer {
     border-top: 1px solid #ccc;
-    font-size: .8em;    
+    font-size: .8em;
     text-align: center;
     padding: 10px 10px 30px 10px;
 }
@@ -323,10 +386,17 @@ body {
 
 
 
-#nav ul, #header h1, .wrapper, #footer p {
+#nav ul,
+#header h1,
+.wrapper,
+#footer p {
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-.wrapper, #nav, #header, #footer{
+
+.wrapper,
+#nav,
+#header,
+#footer {
     min-width: 768px;
 }

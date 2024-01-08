@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="login.css" rel="stylesheet" />
+    <title>READY</title>
+</head>
+
+<body>
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Добавьте работу</h1>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="Название" id="login-name">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="Описание" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+
+                <div class="control-group">
+                    <p>Загрузите работу</p>
+                    <form enctype="multipart/form-data" method="post">
+                        <p><input type="file" name="f"></p>
+                    </form>
+                </div>
+
+                <div class="control-group">
+                    <p>Загрузите обложку</p>
+                    <form enctype="multipart/form-data" method="post">
+                        <p><input type="file" name="f"></p>
+                    </form>
+                </div>
+
+                <div class="control-group">
+                    <p>Выберете метки</p>
+                    <form>
+                        <p><select name="select" size="3" multiple>
+                                <option selected value="s1">Фэнтези</option>
+                                <option value="s2">Детектив</option>
+                                <option value="s3">Романтика</option>
+                                <option value="s4">Юмор</option>
+                            </select>
+                        </p>
+                    </form>
+                </div>
+
+                <a class="btn btn-primary btn-large btn-block" href="start_page.html">Опубликовать</a>
+                <a class="login-link" href="start_page.html">Отмена</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
